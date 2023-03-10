@@ -11,11 +11,13 @@ export const renderCity = (city, data )=>{
 
     // DIA
     let img;
-    const week = ["Enero","Febrero", "Marzo","Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nomviembre", "Diciembre"];
-    const day = ["Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sabado", "Domingo"];
     const dayCity = data.datetime.split(" ")[0].split("-")
-
+    
+    // DAY
     let newdayCity=dayCity.map(items => Number(items));
+    let dateConcat = dayCity.join("-");
+
+    
 
     if(timeCity[0] >= "06" && timeCity[0] <= "20"  ){
         img="01d";
@@ -31,7 +33,7 @@ export const renderCity = (city, data )=>{
     return `
     <div class="titulo-ciudad">
         <h1 class="title">${city.name}</h1>
-        <p class="mes">${day[newdayCity[2]]}, ${newdayCity[2]} de ${week[newdayCity[1]-1]} de ${newdayCity[0]}  </p>
+        <p class="mes">${Day(dateConcat)}, ${newdayCity[2]} de ${Week(dateConcat)} de ${newdayCity[0]}  </p>
     </div>
     <div class="horario-ciudad">
         <div class="contenedor-hora">
@@ -67,4 +69,36 @@ export const renderCity = (city, data )=>{
         </div>
     </div>
     `
+}
+
+
+const Day = DateDay => {
+    let date = new Date(DateDay);
+    let day = date.getDay()+1;
+
+    switch(day){
+        case 1:
+            return "Domingo";
+        case 2:
+            return "Lunes";
+        case 3:
+            return "Martes";
+        case 4:
+            return "Miercoles";
+        case 5:
+            return "Jueves";
+        case 6:
+            return "Viernes";
+        case 7:
+            return "Sabado";
+        default:
+            return "Ese dia no existe";
+    }
+}
+
+const Week = DateWeek =>{
+    let date = new Date(DateWeek);
+    let week = date.getMonth();
+    const weekList = ["Enero","Febrero", "Marzo","Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nomviembre", "Diciembre"];
+    return weekList[week];
 }

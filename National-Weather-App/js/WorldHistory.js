@@ -116,8 +116,8 @@ const warningMsg = msg=>{
 
 const backFunction = ()=>{
     searchTitle.innerText = "El clima en: ";
-    card.style.display = "grid";
-    Desarrollador.style.display = "grid";
+    card.style.display = "";
+    Desarrollador.style.display = "";
     containerHistory.style.display = "";
     containerHistory.classList.add("invisible");
     btnBack.classList.add("invisible")
