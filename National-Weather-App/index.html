@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script type="module" src="./js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/6074008e21.css" crossorigin="anonymous"> -->
+    
+    
+    <!-- <script type="text/javascript" src="./js/moment.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/6074008e21.js" crossorigin="anonymous"></script>
+    
+
+    <title>Pronóstico  Meteorológico Nacional</title>
+    <link rel="icon" href="./src/icon-removebg-preview.png">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="interfaz">
+            
+            <div class="search">
+                <div>
+                    <h1 class="search-title">El clima en: </h1>
+                <form id="form">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input 
+                        type="text" 
+                        name="city"
+                        autocomplete="off"
+                        placeholder="Buscar Ciudad"
+                        class="search-input"
+                    ">
+                </form>
+                </div>
+
+                <div class="historial">
+                    <span id="world"><i class="fa-solid fa-earth-americas icon-world"></i><i class="fa-solid fa-arrow-rotate-left icon-update"></i></span>
+                </div>
+            </div>
+            
+
+            <div class="mensaje-advertencia">
+            </div>
+
+            <div class="card">
+            </div>
+
+            <div class="containerHistory invisible">
+            </div>
+
+            <div class="desarrollador">
+                <p>
+                    Hecho de <span><i class="fa-solid fa-heart"></i></span> por <span>Josen446</span>
+                </p>
+            </div>
+
+            <div class="back invisible">
+                <button class="btn-back">Volver</button>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+</html>

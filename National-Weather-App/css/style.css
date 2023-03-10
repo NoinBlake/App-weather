@@ -1,0 +1,584 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    background: rgb(55 32 92);
+    
+}
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16%;
+}
+
+.invisible{
+    display: none;
+}
+
+.contenedor{
+    height: 100%;
+    display: grid;
+    grid-auto-columns: 80%;
+    justify-content: center;
+    align-content: center;
+}
+
+.interfaz{
+    height: 750px;
+    width: 100%;
+    /* border: white solid 2px; */
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 80px 0px 450px 100px;
+    gap: 20px;
+}
+
+.search{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-flow: column;
+    width: 100%;
+    height: 80px;
+    
+}
+.search h1{
+    color: white;
+    font-size: 9rem;
+    align-self: center;
+}
+
+
+.search form input{
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.search form input{
+    padding-left: 45px;
+}
+
+
+
+.search form span{
+    position: absolute;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    padding-top: 6.5px;
+    color: rgba(98,58,162,1);
+    z-index: 1;
+}
+.search form span i{
+    font-size: 6rem;
+}
+
+.mensaje-advertencia{
+    display: grid;
+    justify-content: start;
+    align-content: end;
+}
+
+.mensaje-advertencia p{
+    font-size: 5rem;
+    padding: 10px;
+    background: rgb(249 151 119 / 20%);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px -2px 30px 1px rgba(252,248,248,0.75);
+}
+
+
+
+.interfaz .card{
+    height: 450px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 75%;
+}
+
+.horario-ciudad{
+    border-bottom: solid 1.5px rgb(170 122 168);
+}
+.horario-ciudad .contenedor-hora .hora{
+    background-color: rgb(236, 231, 243,0.10);
+    box-shadow:inset 2px -2px 30px 1px rgba(252,248,248,0.75);
+    border-radius: 100px 0px 0px 100px ;
+    padding: 15px;
+    font-size: 20rem;
+    font-weight: 700;
+    color: white;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    justify-content: center;
+}  
+
+.titulo-ciudad{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 80px 20px ;
+    border-bottom: 1px solid rgba(252,248,248,0.20);
+}
+.titulo-ciudad .title{
+    font-size:20rem ;
+    padding-top: 10px;
+    color: white;
+}
+
+.titulo-ciudad .mes{
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+    color: rgb(255, 253, 253);
+}
+
+
+.clima{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 20px 320px 30px;
+}
+
+.clima .title-clima{
+    padding-top: 20px;
+    justify-self: center;
+    font-size: 10rem;
+    color: white;
+}
+
+.clima .contenedor-img{
+    width: 200px;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.clima .contenedor-img img{
+    width: 100%;
+    height: 100%;
+}
+.clima .humedad{
+    justify-self: center;
+    font-size: 8rem;
+    font-weight: 500;
+    color: white;
+    border-top: solid  rgba(252,248,248,0.30) 1.5px;
+    border-bottom: solid  rgba(252,248,248,0.30) 1.5px;
+}
+
+.informacion-temperatura{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 8px;
+    padding-top: 28px;
+}
+
+.informacion-temperatura .presicion{
+    margin-left: 20px;
+    
+}
+
+
+.informacion-temperatura .presicion p{
+    display: flex;
+    font-size: 5rem;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 2px;
+    width: 100px;
+    border-bottom: solid  rgba(252,248,248,0.75) 1.5px;
+    margin-left:4px;
+}
+
+.informacion-temperatura .presicion p span:nth-child(1){
+    margin-left: 2px;
+}
+.informacion-temperatura .temperatura p{
+    font-size: 50rem;
+    font-weight: 600;
+    color: white;
+}
+.informacion-temperatura .sensacion-termica{
+    padding-left: 10px;
+    border-bottom: 1.5px rgba(252,248,248,0.75) solid;
+}
+.informacion-temperatura .sensacion-termica p{
+    background:  rgba(252,248,248,0.20);
+    width: 100px;
+    padding: 10px 11px;
+    font-size: 10rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.temperatura-maxima{
+    margin-top: 5px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    
+}
+
+.temperatura-maxima .maxima{
+    font-size: 10rem;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 10px;
+    width: 100px;
+    border-bottom: solid  rgba(252,248,248,0.75) 1.5px;
+}
+
+.velocidad-viento{
+    margin-top: 5px;
+    display: grid;
+    grid-auto-flow: column;
+    padding-left: 30px;
+}
+
+.velocidad-viento p{
+    display: flex;
+    font-size: 10rem;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 10px;
+    width: 100px;
+    border-bottom: solid  rgba(252,248,248,0.75) 1.5px;
+}
+.velocidad-viento p span:nth-child(1){
+    padding-right: 5px;
+}
+
+.velocidad-viento p span:nth-child(2){
+    padding-left: 5px;
+}
+
+.desarrollador{
+    display: grid;
+    justify-content: center;
+    align-content: end;
+    grid-auto-flow: column;
+    gap: 2px;
+}
+
+.desarrollador p{
+    font-size: 8.5rem;
+    font-weight: 600;
+}
+.desarrollador span i{
+    color: rgb(255, 255, 255);
+}
+
+.desarrollador span:nth-child(2){
+    color: rgb(248, 247, 248);
+}
+
+.isDayCity {
+    width: 50px;
+    margin-top: 7px;
+}
+.historial span{
+    position: relative;
+    justify-items: end;
+    display: grid;
+}
+.historial span .icon-world{
+    font-size: 20rem;
+    color: white;
+    animation: rotateIcon 5s infinite;
+    position: absolute;
+    cursor: pointer;
+}
+
+.historial span .icon-update{
+    font-size: 20rem;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+.containerHistory{
+    width: 100%;
+    /* border: 2px white solid; */
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar{
+    height: 13px;   
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #623aa2;
+    border-radius: 5px;
+}
+
+.containerHistory::-webkit-scrollbar-thumb{
+    background:  rgba(166,156,240,1) 56%;
+}
+
+.containerHistory .cardHistory{
+    height: 100%;
+    width: 314px;
+    display: grid;
+    grid-template-rows: 15% 40% 45%;
+    border: white solid 2px;
+    border-radius: 20px;
+}
+
+.containerHistory .cardHistory .title{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-template-columns: 85% 15%;
+}
+
+.containerHistory .cardHistory .title .title-fecha{
+    justify-self: center;
+}
+.containerHistory .cardHistory .title .icon-close{
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.containerHistory .cardHistory .title .icon-close i{
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.containerHistory .cardHistory .title p{
+    font-size: 10rem;
+    color: white;
+}
+
+.containerHistory .cardHistory .title .fecha{
+    font-size: 5rem;
+    color: rgba(252,248,248,0.75);
+    margin-left: 15px;
+}
+
+.containerHistory .cardHistory .historyImg{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.containerHistory .cardHistory .historyInformationContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-self: center;
+    align-self: self-end;
+    position: relative;
+    border-radius: 40px 40px 20px 20px;
+    /* background-image: radial-gradient( circle 957px at 8.7% 50.5%,  rgba(246,191,13,1) 0%, rgba(249,47,47,1) 90% ); */
+    background: rgb(98 58 162);
+}
+
+.containerHistory .cardHistory .historyInformation{
+    justify-self: center;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 0px 0px 40px 40px;
+    background: linear-gradient(180deg, rgba(205,200,241,1) 0%, rgba(166,156,240,1) 56%);
+    display: grid;
+    grid-template-rows: 70% 30% ;
+}
+
+.containerHistory .cardHistory .historyInformation .feels-like{
+    justify-self: center;
+    align-self: center;
+}
+
+.containerHistory .cardHistory .historyInformation .feels-like p{
+    font-size: 30rem;
+    color: #623aa2;
+    padding-left: 32px;
+    font-weight: 700;
+}
+
+.containerHistory .cardHistory .historyInformation .feels-like .feels-like-climate{
+    font-size: 10rem;
+    color: #623aa2;
+    padding-left: 40px;
+    font-weight: 700;
+}
+
+.containerHistory .cardHistory .thermal-sensation{
+    justify-self: center;
+    align-self: center;
+}
+
+.containerHistory .cardHistory .thermal-sensation p{
+    font-size: 10rem;
+    color: #c9c3f1;
+    margin-left: 10px;
+    padding: 8px;
+    font-weight: 700;
+    background: #623aa2;
+    border-radius: 10px;
+}
+
+
+
+.interfaz .btn-back{
+    display: grid;
+    justify-self: flex-end;
+    align-self: center;
+    height: 50px;
+    width: 120px;
+    padding-top: 10px;
+    font-size: 8rem;
+    border-radius: 10px;
+    border: white solid 2px;
+    background-image: linear-gradient( 83.2deg, rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
+    color: white;
+    box-shadow: 4px 4px 14px -4px rgb(246 244 249);
+    cursor: pointer;
+}
+
+@keyframes rotateIcon {
+    0%{
+        -webkit-transform: rotate(-360deg);
+        transition: 0.1s all;
+    }100%{
+        -webkit-transform:  rotate(360deg);
+        transition: all 0.1s;
+    }
+}
+
+@keyframes updateIcon {
+    0%{
+        -webkit-transform: rotate(360deg);
+        transition: 0.1s all;
+    }100%{
+        -webkit-transform:  rotate(-360deg);
+        transition: all 0.1s;
+    }
+}
+
+@media (max-width:778px) {
+    .contenedor{
+        width: 100%;
+    }
+    .card{
+        grid-template-rows: 20% 80%;
+    }
+
+    .search form input {
+        width: 162px;
+    }    
+
+    .horario-ciudad .contenedor-hora .hora{
+        font-size: 10rem;
+    }
+    .titulo-ciudad{
+        grid-template-rows: 50px 20px;
+    }
+    .titulo-ciudad .title{
+        font-size: 10rem;
+    }
+    .titulo-ciudad .mes{
+        font-size: 5rem;
+    }
+
+    .clima .contenedor-img img {
+        width: 80%;
+        height: 80%;
+        margin-left: 20px;
+        object-fit: contain;
+    }
+
+    .informacion-temperatura .temperatura p{
+        font-size: 35rem;
+    }
+    .isDayCity{
+        width: 25px;
+        margin-top: 3px;
+    }
+
+    .historial{
+        align-self: baseline;
+        margin-top: 25px;
+        margin-right: 10px;
+    }
+
+    .historial span .icon-world {
+        font-size: 10rem;
+    }
+
+    .historial span .icon-update {
+        font-size: 10rem;
+    }
+
+}
+
+@media (max-width:520px) {
+    .contenedor{
+        grid-auto-columns: 100%;
+    }
+
+    .interfaz{
+        padding: 0;
+        gap: 0;
+    }
+
+    .interfaz .card{
+        display: block;
+    }
+
+    .containerHistory .cardHistory{
+        height: 85%;
+        width: 320px;
+    }
+
+    .containerHistory .cardHistory .title p{
+        font-size: 7rem;
+    }
+
+    .containerHistory .cardHistory .historyImg img{
+        object-fit: cover;
+        width:110px;
+    };
+
+    .containerHistory .cardHistory .historyInformation .feels-like{
+
+        align-content: center;
+        display: grid;
+        justify-items: center;
+    }
+
+    .containerHistory .cardHistory .historyInformation .feels-like p{
+        font-size: 15rem;
+    }
+
+    .containerHistory .cardHistory .thermal-sensation p{
+        font-size: 7rem;
+        margin-bottom: 10px;
+    }
+
+    .desarrollador{
+        display: none;
+    }
+
+}
